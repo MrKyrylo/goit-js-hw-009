@@ -1,4 +1,5 @@
 import SimpleLightbox from "simplelightbox";
+
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
@@ -87,11 +88,10 @@ const images = [
       ) 
       .join('');
   }
-  console.log(createGalleryItem(images));
   
   galleryContainer.innerHTML = createGalleryItem(images);
   
-  const  lightbox = new SimpleLightbox('.gallery__link', {
+  const  lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
     })  ;
